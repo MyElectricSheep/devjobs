@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 
 let connectionString;
 
-const { PG_URL_DEV, PG_URL_PROD } = process.env;
+const { PG_URL_DEV, DATABASE_URL } = process.env;
 
 if (process.env.NODE_ENV === "development") {
   connectionString = PG_URL_DEV;
