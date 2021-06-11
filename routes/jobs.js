@@ -16,7 +16,7 @@ jobRouter.get("/", async (req, res) => {
   }
 });
 
-// Display add job from
+// Display add job
 jobRouter.get("/add", (req, res) => {
   res.render("add");
 });
@@ -83,7 +83,8 @@ jobRouter.get("/search", async (req, res) => {
   }
 });
 
-// Seed jobs from mock data if database is empty
+// Destroy, then rebuild the Jobs table
+// + seed jobs from mock data into the table
 jobRouter.post("/rebuild", async (req, res) => {
   try {
     await db.query(`

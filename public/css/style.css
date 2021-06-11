@@ -104,7 +104,7 @@ header.inner {
 
 /* Home Search */
 .search-wrap {
-  background-image: url("../img/showcase.jpg");
+  /* background-image: url("../img/showcase.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

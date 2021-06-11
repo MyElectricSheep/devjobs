@@ -1,6 +1,7 @@
 import express from "express";
 import handlebars from "express-handlebars";
 import path from "path";
+import { grabRandomBgPic } from "./utilities/pictures.js";
 
 // ESM doesn't have __dirname or __filename; we have to emulate them:
 // https://github.com/nodejs/help/issues/2907
@@ -23,8 +24,8 @@ app.use(express.urlencoded({ extended: false }));
 app.engine("handlebars", handlebars({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-app.get("/", (req, res) => {
-  res.render("index", { layout: "landing" });
+app.get("/", async (req, res) => {
+  res.render("index", { layout: "landing", bgPic: await grabRandomBgPic() });
 });
 
 // Job routes
