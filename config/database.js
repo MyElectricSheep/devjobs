@@ -7,7 +7,7 @@ const { PG_URL_DEV, PG_URL_PROD } = process.env;
 if (process.env.NODE_ENV === "development") {
   connectionString = PG_URL_DEV;
 } else {
-  connectionString = PG_URL_PROD;
+  connectionString = DATABASE_URL;
 }
 
 const db = new Sequelize(connectionString);
