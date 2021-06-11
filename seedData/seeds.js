@@ -1,43 +1,51 @@
 const seeds = [
   {
-    title: "Looking for a React Developer",
-    technologies: "react,javascript,html,css",
-    budget: "$3000",
+    title: "Full-Stack Developer",
+    technologies: "python,flask,react,html,css",
+    budget: "$4000",
     description:
-      "Velit duis elit proident eiusmod irure. Lorem ullamco ipsum laborum exercitation ex ullamco mollit. Duis minim sit dolor reprehenderit dolore tempor. Aute qui deserunt tempor nostrud. Esse et Lorem et ipsum dolore cillum.",
-    contact_email: "user1@email.com",
+      "Smarkets is a peer-to-peer exchange for sports and political betting that has handled over £20 billion in trading volume since 2010. Our goal is to upend the sports betting industry by creating a transparent platform that creates the best value for users with not only the fairest odds but also the best technology, alongside a superior customer experience. Technically we use Python/Flask/React but we are happy to see people from other technical backgrounds who want to work in those technologies.",
+    contact_email: "chris@smarkets.com",
   },
   {
-    title: "Looking for a Wordpress Developer",
-    technologies: "wordpress,php,html,css",
-    budget: "$8000",
+    title: "Front-End Developer",
+    technologies: "react,vue,javascript,typescript",
+    budget: "$5400",
     description:
-      "Consectetur labore Lorem ullamco esse exercitation. Tempor dolor proident aute tempor anim nisi sunt minim consequat dolore ea ea aliqua. Sit officia ad nisi Lorem velit adipisicing. Ad voluptate exercitation esse dolore nulla. Magna incididunt consequat quis quis ut culpa dolor laboris irure cillum voluptate dolore consequat adipisicing. Reprehenderit occaecat adipisicing qui cillum exercitation do sint laboris fugiat cupidatat id incididunt tempor.",
-    contact_email: "user8@email.com",
+      "An ambitious and rapidly growing audio company are looking for multiple Frontend Developers to join the team to help them build their hugely innovative products. You will need to have 3+ years of frontend development and be someone who is always curious and believes in using the right tool for the job. Their stack is TypeScript based with Vue being used for most for the frontend development, you don’t need to have experience in Vue, as long as you have experience in a modern JavaScript framework and would be eager to learn a new one, they have a huge learning and inclusive culture. With a mixture of office based and WFH you and the team will be taking on the likes of Spotify.",
+    contact_email: "trg.recruitment@trg.com",
   },
   {
-    title: "Python developer needed urgently",
-    technologies: "python,tensorflow,tableau",
+    title: "Senior Front-End Developer",
+    technologies: "javascript,react",
     budget: "$10000",
     description:
-      "Voluptate elit dolor proident et voluptate elit ad excepteur nostrud elit commodo enim. Nulla commodo ea eiusmod ex elit ut ex sint anim. Reprehenderit non veniam nisi officia adipisicing labore tempor laborum voluptate aliquip do magna duis duis. Non Lorem culpa esse incididunt nulla enim aliqua.",
-    contact_email: "user100@email.com",
+      "We are looking for a Senior Javascript / React JS engineer to be part of a research team that designs and prototypes new concepts to be adopted to their global platform. You will be responsible for designing and advising solid, scalable, and reliable development patterns that support the needs of a high-performance and delightful Web IDE. The research team will help improve the platform to remove application development complexity from their customers. You can expect significant challenges designing and developing elegant solutions for high-tech problems, innovating how software development is available to everyone while keeping an eye on the upcoming technologies and frameworks.",
+    contact_email: "jobs@damia-group.com",
   },
   {
-    title: "In need of a front-end developer",
-    technologies: "react,vue,angular,javascript,html,css",
+    title: "Full-Stack JavaScript Engineer",
+    technologies: "react,vue,node,typescript,docker,aws,circleci",
     budget: "$15000",
     description:
-      "Pariatur sint magna in esse ea esse incididunt sit sint excepteur ipsum elit. Culpa veniam cupidatat excepteur esse laboris aute cillum labore eu fugiat aliquip. Cillum sint dolor esse id irure qui veniam voluptate non nostrud. Incididunt excepteur aliqua aute irure. Dolor duis labore elit mollit id ut. Sit et occaecat ea irure dolore.",
-    contact_email: "user1@email.com",
+      "DataCamp is building the best platform to learn and teach data skills. We create technology for personalized learning experiences and bring the power of data fluency to millions of people around the world. Our learners get real hands-on experience by completing self-paced, interactive data science courses, practice, and projects from the best instructors in the world, right in the browser. We are looking for a talented and motivated engineer to join the Growth team. You will work on making the learning experience on DataCamp more engaging, social and fun, ultimately enabling more learners to achieve their goals and become champions for DataCamp within their organizations.",
+    contact_email: "recruitment@datacamp.com",
   },
   {
-    title: "Looking for a ninja React Developer",
+    title: "Junior Front End Developer",
     technologies: "react,javascript,html,css",
-    budget: "$5000",
+    budget: "$3500",
     description:
-      "Nulla dolore culpa reprehenderit mollit tempor aliquip labore amet nostrud magna Lorem exercitation eu. Velit non sint incididunt irure aliquip mollit nulla mollit quis culpa. Labore cillum minim commodo ullamco occaecat labore ex exercitation consectetur ipsum enim in anim.",
-    contact_email: "user1@email.com",
+      "We are looking for a Junior Front End Developer to join the UK development team in one of the largest sports E-commerce sites globally. What you will need to succeed: commercial experience in JavaScript, HTML and CSS.",
+    contact_email: "info@hays.com",
+  },
+  {
+    title: "Senior Full Stack Developer",
+    technologies: "node,javascript",
+    budget: "$8500",
+    description:
+      "As a senior software engineer you will be responsible for: Contributing to architectural discussions and helping us make technical implementation decisions. Building new features for our existing products. Troubleshooting issues and maintaining our existing stack. Communicating with external stakeholders about technical implementations. Coaching and supporting junior developers within the team.",
+    contact_email: "jobs@bibliu.com",
   },
 ];
 
