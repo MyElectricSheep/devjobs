@@ -1,0 +1,25 @@
+{
+  "name": "devjobs",
+  "version": "1.0.0",
+  "description": "Job finder app for developers",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production node -r dotenv/config app.js",
+    "dev": "NODE_ENV=development nodemon -r dotenv/config app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Paget",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
