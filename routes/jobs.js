@@ -1,6 +1,7 @@
 import express from "express";
 const jobRouter = express.Router();
 import seeds from "../seedData/seeds.js";
+import db from "../config/database.js";
 import Job from "../models/Job.js";
 import { Sequelize } from "sequelize";
 
@@ -83,32 +84,40 @@ jobRouter.get("/search", async (req, res) => {
 });
 
 // Seed jobs from mock data if database is empty
-jobRouter.post("/seed", async (req, res) => {
-  let isDatabaseSeeded;
-
+jobRouter.post("/rebuild", async (req, res) => {
   try {
-    const jobs = await Job.findAll();
-    if (jobs.length) isDatabaseSeeded = true;
+    await db.query(`
+    DROP TABLE IF EXISTS jobs;
+    `);
+    await db.query(`
+    CREATE TABLE jobs (
+      id SERIAL NOT NULL PRIMARY KEY,
+      title VARCHAR(200),
+      technologies VARCHAR(200),
+      budget VARCHAR(20),
+      description TEXT,
+      contact_email VARCHAR(200),
+      "createdAt" date,
+      "updatedAt" date
+    );
+  `);
   } catch (e) {
     console.log(e);
   }
 
-  if (!isDatabaseSeeded) {
-    const seedPromises = seeds.map(async (seed) => {
-      try {
-        return await Job.create(seed);
-      } catch (e) {
-        console.log(e);
-      }
-    });
-
+  const seedPromises = seeds.map(async (seed) => {
     try {
-      const seedResults = await Promise.all(seedPromises);
-      console.log({ seedResults });
-      res.redirect("/jobs");
+      return await Job.create(seed);
     } catch (e) {
       console.log(e);
     }
+  });
+
+  try {
+    const seedResults = await Promise.all(seedPromises);
+    res.json(seedResults);
+  } catch (e) {
+    console.log(e);
   }
 });
 
