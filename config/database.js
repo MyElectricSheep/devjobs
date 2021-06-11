@@ -1,33 +1,25 @@
 import { Sequelize } from "sequelize";
 
-let connectionString;
-
 const { PG_URL_DEV, DATABASE_URL } = process.env;
 
+let db;
+
 if (process.env.NODE_ENV === "development") {
-  connectionString = PG_URL_DEV;
+  db = new Sequelize(PG_URL_DEV, {
+    dialect: "postgres",
+  });
 } else {
-  connectionString = DATABASE_URL;
-}
-
-const db = new Sequelize(`${connectionString}?sslmode=require`, {
-  dialect: "postgres",
-  native: true,
-  ssl: true,
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
+  db = new Sequelize(DATABASE_URL, {
+    dialect: "postgres",
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
     },
-  },
-});
-
-// pool: {
-//     max: 5,
-//     min: 0,
-//     acquire: 30000,
-//     idle: 10000,
-//   },
+  });
+}
 
 try {
   await db.authenticate();

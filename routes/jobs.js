@@ -93,7 +93,7 @@ jobRouter.post("/seed", async (req, res) => {
     console.log(e);
   }
 
-  if (!databaseSeeded) {
+  if (!isDatabaseSeeded) {
     const seedPromises = seeds.map(async (seed) => {
       try {
         return await Job.create(seed);
