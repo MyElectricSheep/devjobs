@@ -10,7 +10,17 @@ if (process.env.NODE_ENV === "development") {
   connectionString = DATABASE_URL;
 }
 
-const db = new Sequelize(connectionString);
+const db = new Sequelize(`${connectionString}?sslmode=require`, {
+  dialect: "postgres",
+  native: true,
+  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+});
 
 // pool: {
 //     max: 5,
