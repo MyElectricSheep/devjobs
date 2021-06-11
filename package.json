@@ -8,6 +8,9 @@
     "dev": "NODE_ENV=development nodemon -r dotenv/config app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "author": "Ben Paget",
   "type": "module",
   "license": "MIT",
