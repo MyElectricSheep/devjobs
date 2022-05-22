@@ -1,5 +1,7 @@
 #  🧑‍💻👩🏽‍💻👨🏿‍💻👩🏼‍💻🧑🏾‍💻 DevJobs 🚀
 
+- ##### This is the demo of an exercise I created for the [WBS Coding School](https://www.wbscodingschool.com/) to make web dev students practice their **Node + Express + Postgres ** skills.
+
 The latest front-end, back-end, or full-stack _programming jobs_ from top companies! Find your new coding job today on **DevJobs**!
 
 In this app, users can:
