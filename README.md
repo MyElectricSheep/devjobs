@@ -20,4 +20,4 @@ In this app, users can:
 
 # 🚀 Live version
 
-A [live version of the app](http://mydevjobs.herokuapp.com/) can be found here!
+A [live version of the app](http://devjobs.ben.express/) can be found here!
